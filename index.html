@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Web</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+</head>
+
+<style>
+  .carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+  }
+
+  .carousel-item {
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+  }
+
+  #carousel-1:checked~.control-1,
+  #carousel-2:checked~.control-2,
+  #carousel-3:checked~.control-3 {
+    display: block;
+  }
+
+  .carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+  }
+
+  #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+  #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+  #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #2b6cb0;
+
+  }
+</style>
+
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+
+  <div class="w-full m-0 p-0 bg-cover bg-bottom"
+    style="background-image:url('https://cdn.discordapp.com/attachments/582422645950382080/916201636295225374/8.jpg.png'); height: 60vh; max-height:460px;">
+    <div class="container max-w-4xl mx-auto pt-16 md:pt-32 text-center break-normal">
+      <!--Title-->
+      <p class="text-white font-extrabold text-3xl md:text-5xl">
+        Proyecto Integrador
+      </p>
+      <p class="pt-2 font-medium text-xl md:text-2xl text-white">Jorge Obed Garfias Sánchez</p>
+    </div>
+  </div>
+
+  <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+
+    <div class="mx-0 sm:mx-6">
+
+      <!--Nav-->
+      <div class="carousel relative rounded relative overflow-hidden shadow-xl">
+        <div class="carousel-inner relative overflow-hidden w-full">
+          <!--Slide 1-->
+          <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden=""
+            checked="checked" />
+          <div class="carousel-item absolute opacity-0 bg-cover " style="
+                            height: 500px;
+                            background-image: url(https://cdn.discordapp.com/attachments/582422645950382080/916202759567577098/9f5858fb40b6615c5e70cfb348a5c8d4.png);
+                          "></div>
+          <label for="carousel-3" class="
+                            control-1
+                            w-10
+                            h-10
+                            ml-2
+                            md:ml-10
+                            absolute
+                            cursor-pointer
+                            hidden
+                            font-bold
+                            text-black
+                            hover:text-white
+                            rounded-full
+                            bg-white
+                            hover:bg-blue-700
+                            leading-tight
+                            text-center
+                            z-10
+                            inset-y-0
+                            left-0
+                            my-auto
+                            flex
+                            justify-center
+                            content-center
+                          "><i class="fas fa-angle-left mt-3"></i></label>
+          <label for="carousel-2" class="
+                            next
+                            control-1
+                            w-10
+                            h-10
+                            mr-2
+                            md:mr-10
+                            absolute
+                            cursor-pointer
+                            hidden
+                            font-bold
+                            text-black
+                            hover:text-white
+                            rounded-full
+                            bg-white
+                            hover:bg-blue-700
+                            leading-tight
+                            text-center
+                            z-10
+                            inset-y-0
+                            right-0
+                            my-auto
+                          "><i class="fas fa-angle-right mt-3"></i></label>
+
+          <!--Slide 2-->
+          <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="" />
+          <div class="carousel-item absolute opacity-0 bg-cover" style="
+                            height: 500px;
+                            background-image: url(https://cdn.discordapp.com/attachments/582422645950382080/916202759836033044/e52e328fa2182b4ead5a0d461f9d405c.png);
+                          "></div>
+          <label for="carousel-1" class="
+                            control-2
+                            w-10
+                            h-10
+                            ml-2
+                            md:ml-10
+                            absolute
+                            cursor-pointer
+                            hidden
+                            font-bold
+                            text-black
+                            hover:text-white
+                            rounded-full
+                            bg-white
+                            hover:bg-blue-700
+                            leading-tight
+                            text-center
+                            z-10
+                            inset-y-0
+                            left-0
+                            my-auto
+                          "><i class="fas fa-angle-left mt-3"></i></label>
+          <label for="carousel-3" class="
+                            next
+                            control-2
+                            w-10
+                            h-10
+                            mr-2
+                            md:mr-10
+                            absolute
+                            cursor-pointer
+                            hidden
+                            font-bold
+                            text-black
+                            hover:text-white
+                            rounded-full
+                            bg-white
+                            hover:bg-blue-700
+                            leading-tight
+                            text-center
+                            z-10
+                            inset-y-0
+                            right-0
+                            my-auto
+                          "><i class="fas fa-angle-right mt-3"></i></label>
+
+          <!--Slide 3-->
+          <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="" />
+          <div class="carousel-item absolute opacity-0 bg-cover" style="
+                            height: 500px;
+                            background-image: url(https://cdn.discordapp.com/attachments/582422645950382080/916202760054112276/7d7fbe8a44b392a3365f0b7bb9926f2b.png);
+                          "></div>
+          <label for="carousel-2" class="
+                            control-3
+                            w-10
+                            h-10
+                            ml-2
+                            md:ml-10
+                            absolute
+                            cursor-pointer
+                            hidden
+                            font-bold
+                            text-black
+                            hover:text-white
+                            rounded-full
+                            bg-white
+                            hover:bg-blue-700
+                            leading-tight
+                            text-center
+                            z-10
+                            inset-y-0
+                            left-0
+                            my-auto
+                          "><i class="fas fa-angle-left mt-3"></i></label>
+          <label for="carousel-1" class="
+                            next
+                            control-3
+                            w-10
+                            h-10
+                            mr-2
+                            md:mr-10
+                            absolute
+                            cursor-pointer
+                            hidden
+                            font-bold
+                            text-black
+                            hover:text-white
+                            rounded-full
+                            bg-white
+                            hover:bg-blue-700
+                            leading-tight
+                            text-center
+                            z-10
+                            inset-y-0
+                            right-0
+                            my-auto
+                          "><i class="fas fa-angle-right mt-3"></i></label>
+
+          <!-- Add additional indicators for each slide-->
+          <ol class="carousel-indicators">
+            <li class="inline-block mr-3">
+              <label for="carousel-1" class="
+                                carousel-bullet
+                                cursor-pointer
+                                block
+                                text-4xl text-white
+                                hover:text-blue-700
+                              ">•</label>
+            </li>
+            <li class="inline-block mr-3">
+              <label for="carousel-2" class="
+                                carousel-bullet
+                                cursor-pointer
+                                block
+                                text-4xl text-white
+                                hover:text-blue-700
+                              ">•</label>
+            </li>
+            <li class="inline-block mr-3">
+              <label for="carousel-3" class="
+                                carousel-bullet
+                                cursor-pointer
+                                block
+                                text-4xl text-white
+                                hover:text-blue-700
+                              ">•</label>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-5 p-16 max-w-4xl mx-auto bg-white rounded-xl shadow-xl flex items-center">
+    <div>
+      <div class="text-xl font-medium text-black">Descripción</div>
+      <p class="text-gray-500">Juego pensado en realidad aumentado pero adaptado para jugar en pagina web. </p>
+      <p class="text-gray-500">Trata de un historia en donde vas buscando dibujos de una niña y cuenta atravez de ellos
+        lo que paso en su pasado</p>
+    </div>
+  </div>
+
+  <div class="m-5 space-x-2 p-16 max-w-4xl mx-auto bg-white rounded-xl shadow-xl flex items-center">
+    <div class="flex-1 text-xl font-medium text-black">Alumno
+      <p class="text-gray-500 text-sm">Nombre: Jorge Obed Garfias Sánchez</p>
+      <p class="text-gray-500 text-sm">Grupo: DGDIE91</p>
+      <p class="text-gray-500 text-sm">Materia: Juegos para Dispositivos Moviles</p>
+    </div>
+    <div class="flex-1 text-xl font-medium text-black">Profesor
+      <p class="text-gray-500 text-sm">Nombre: SILVA FRAGOSO CRISTIAN ALAN</p>
+    </div>
+
+  </div>
+
+  <div class="m-8 flex space-x-4 max-w-4xl mx-auto bg-white mx-auto rounded-xl">
+    <div class="p-5 flex-1 text-center text-xl font-medium text-black">Instrucciones
+      <p class="text-sm text-gray-500">Teclado:</p>
+      <p class="text-sm text-gray-500">A,W,D,S</p>
+      <p class="py-2 text-sm text-gray-500">Con el mouse mueves la vista</p>
+    </div>
+    <div class="p-5 flex-1 text-center text-xl font-medium text-black">Para salirte
+      <p class="text-sm text-gray-500">Si ves que tu mouse no aparece o quieres salirte del juego
+        solo preciones "ESQ"</p>
+    </div>
+    <div class="p-5 flex-1 text-center text-xl font-medium text-black">Maximizar la pantalla
+      <p class="text-sm text-gray-500">Abajo parece un boton donde se puede maximizar en tu pantalla.</p>
+    </div>
+  </div>
+
+
+  <div id="unity-container" class="unity-desktop">
+    <canvas id="unity-canvas"  width="100%" height="90vh"></canvas>
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
+    </div>
+    <div id="unity-mobile-warning">
+      WebGL builds are not supported on mobile devices.
+    </div>
+    <div id="unity-footer">
+      <div id="unity-fullscreen-button"></div>
+      <div id="unity-build-title">Horror Story</div>
+    </div>
+  </div>
+  <script>
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/WebMovil.loader.js";
+    var config = {
+      dataUrl: buildUrl + "/WebMovil.data",
+      frameworkUrl: buildUrl + "/WebMovil.framework.js",
+      codeUrl: buildUrl + "/WebMovil.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "DefaultCompany",
+      productName: "Web",
+      productVersion: "0.1",
+    };
+
+    var container = document.querySelector("#unity-container");
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBarFull = document.querySelector("#unity-progress-bar-full");
+    var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+    var mobileWarning = document.querySelector("#unity-mobile-warning");
+
+    // By default Unity keeps WebGL canvas render target size matched with
+    // the DOM size of the canvas element (scaled by window.devicePixelRatio)
+    // Set this to false if you want to decouple this synchronization from
+    // happening inside the engine, and you would instead like to size up
+    // the canvas DOM size and WebGL render target sizes yourself.
+    // config.matchWebGLToCanvasSize = false;
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      container.className = "unity-mobile";
+      // Avoid draining fillrate performance on mobile devices,
+      // and default/override low DPI mode on mobile browsers.
+      config.devicePixelRatio = 1;
+      mobileWarning.style.display = "block";
+      setTimeout(() => {
+        mobileWarning.style.display = "none";
+      }, 5000);
+    } else {
+      canvas.style.width = "100%";
+      canvas.style.height = "90vh";
+    }
+    loadingBar.style.display = "block";
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = 100 * progress + "%";
+      }).then((unityInstance) => {
+        loadingBar.style.display = "none";
+        fullscreenButton.onclick = () => {
+          unityInstance.SetFullscreen(1);
+        };
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+</body>
+
+</html>
